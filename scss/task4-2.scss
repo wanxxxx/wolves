@@ -1,0 +1,184 @@
+@import'common';
+@mixin abs ($top:60px) {
+    position: absolute;
+    top: $top;
+}
+body {
+    >div {
+        background: #eee;
+    }
+}
+.show {
+    display: flex;
+}
+.hide {
+    display: none;
+}
+#main {
+    height: 520px;
+    overflow-y: auto;margin-bottom: 75px;
+}
+.main1 {
+    display: none;
+    width: 90%;
+    >div {
+        background: #fff;
+        width: 95%;
+        border: 2px solid #ccc;
+        margin-top: 5px;
+        @extend .center2;
+    }
+    input {
+        @extend .center3;
+    }
+    .div1 {
+        height: 40px;
+        @extend .center3;
+        width: 100%;
+        input {
+            color: $blue;
+        }
+    }
+    .div2 {
+        padding: 25px 0;
+        @extend .center3;
+        flex-direction: row;
+        position: relative;
+        display: none;
+        width: 100%;
+        >div {
+            width: 100%;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            top: -9px;
+            height: 0;
+            width: 0;
+            border-bottom: 10px solid white;
+            border-right: 8px solid transparent;
+            border-left: 8px solid transparent;
+        }
+        .line {
+            height: 140px;
+            width: 2px;
+            background: #ccc;
+            margin: 0 20px;
+        }
+        >div>div {
+            position: relative;
+        }
+        img {
+            position: absolute;
+            left: -37px;
+            height: 30px;
+            width: 30px;
+        }
+        .btn {
+            width: 70%;
+        }
+        .btn::before {
+            content: '';
+            position: absolute;
+            left: -4px;
+            top: 7px;
+            height: 0;
+            width: 0;
+            border-right: 18px solid #24a7c6;
+            border-top: 8px solid transparent;
+            border-bottom: 8px solid transparent;
+        }
+        .btn-click {
+            @extend .btn;
+            >p {
+                background: #83b09b;
+            }
+            &::before {
+                border-right: 18px solid #83b09b;
+            }
+        }
+    }
+    .input1 {
+        width: 70%;
+        display: none;
+        padding-left: 10px;
+    }
+    .input2 {
+        color: $blue;
+        font-weight: bold;
+        padding-left: 10px;
+    }
+}
+.a {
+    background: #b9e9f5;
+    @include abs;
+    .s {
+        @include abs;
+        left: 10%;
+        border-top: 10px solid #b9e9f5;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        z-index: 1;
+    }
+}
+.p {
+    background: #24a7c6;
+    margin: 12px;
+    height: 30px;
+    width: 125%;
+    color: #fff;
+    position: relative;
+    @extend .size-m, .center3;
+}
+.main {
+    &-div {
+        width: 351px;
+        white-space: normal;
+        >div {
+            margin: 15px;
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+            border: 2px solid #fff;
+            position: relative;
+            .choose1 {
+                @extend .size-m;
+                color: #000;
+                width: inherit;
+                background: #f5c97b;
+                height: 70%;
+            }
+            .choose2 {
+                color: #fff;
+                width: 15px;
+                width: inherit;
+                height: 30%;
+                background: #83b09a;
+            }
+            .img {
+                height: 15px;
+                width: 15px;
+                z-index: 100;
+                @include abs(85px);
+                @extend .center-x;
+                visibility: hidden;
+            }
+            &:hover .img {
+                visibility: visible;
+            }
+        }
+    }
+}
+footer {
+    background: $blue;
+    width: 100%;
+    max-width: 100%;
+    height: 70px;
+    position: absolute;
+    bottom: 0;
+    a {
+        width: 40%;
+        padding: 10px;
+        margin: 0 5%;
+    }
+}

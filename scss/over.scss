@@ -1,0 +1,85 @@
+@import'common';
+$blue:#5fc0cd;
+@mixin flex($ali:center, $jus:center, $w:100%, $h:60px) {
+    display: flex;
+    align-items: $ali;
+    justify-content: $jus;
+    width: $w;
+    height: $h;
+}
+$border:1px solid #c4c4c4;
+* {
+    justify-content: auto;
+}
+main {
+    overflow-y: auto;
+}
+.main {
+    overflow-y: auto;
+    width: 100%;
+    height: 650px;
+    >div {
+        width: 80%;
+        @extend .center2;
+    }
+    &-part1 {
+        padding: 95px 0;
+        position: relative;
+        @extend .center2;
+        .img1 {
+            @include abs(70px);
+        }
+        .img2 {
+            @include abs(60px);
+        }
+        >p {
+            @include abs(149px);
+            font-weight: bold;
+            color: white;
+            white-space: nowrap
+        }
+    }
+    &-part3 {
+        margin-left: -50%;
+        p {
+            width: 100px;
+            @extend .size-m;
+            color: white;
+            text-align: left;
+            margin: 7px;
+        }
+        >div {
+            @extend .center3
+        }
+    }
+}
+.main2 {
+    margin-top: 50px;
+    color: #868686;
+    background: white;
+    width: 90%;
+    margin-bottom:100px;
+    .box {
+        border: $border;
+    }
+    p {
+        text-align: left;
+        margin: 5px 0 5px 5%;
+        display: block;
+    }
+}
+footer {
+    background: #29bde0;
+    width: 90%;
+    max-width: 90%;
+    height: 70px;
+    position: absolute;
+    bottom: 0;
+    div {
+        width: 70%;
+        background: #fbb435;
+        height: 45px;
+        margin-bottom: 25px;
+        @extend .center3;
+    }
+}
