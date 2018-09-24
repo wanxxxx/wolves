@@ -2,10 +2,12 @@
 body>div {
     background: #eee;
 }
+
 .main {
-    >div, >p {
+    >div,
+    >p {
         width: 90%;
-        margin: 5px;
+        margin: 10px;
         background: #fff;
         text-align: center;
         @extend .size-m;
@@ -17,7 +19,7 @@ body>div {
         box-shadow: 2px 2px 2px #aaa
     }
     .part1 {
-        height: 170px;
+        height: 25vh;
         @extend .center3;
         >div {
             margin: 10%;
@@ -25,10 +27,11 @@ body>div {
     }
     .part2 {
         position: relative;
-        height: 140px;
+        height: 25vh;
         @extend .center2;
         justify-content: center;
-        >p, >div {
+        >p,
+        >div {
             margin: 15px 0;
         }
         .span1 {
@@ -57,6 +60,7 @@ body>div {
         }
     }
 }
+
 @mixin track {
     height: 3px;
     border-radius: 1px;
@@ -64,6 +68,7 @@ body>div {
     width: 80%;
     background: orange;
 }
+
 @mixin thumb {
     -webkit-appearance: none;
     height: 23px;
@@ -76,27 +81,34 @@ body>div {
     border: solid 2px orange;
     /*设置边框*/
 }
+
 input[type=range] {
     -webkit-appearance: none;
     border-radius: 10px;
     /*这个属性设置使填充进度条时的图形为圆角*/
     width: 80%;
 }
+
 input[type=range]::-webkit-slider-thumb {
     -webkit-appearance: none;
 }
+
 input[type=range]:focus {
     outline: none;
 }
+
 input[type=range]::-webkit-slider-runnable-track {
     @include track;
 }
+
 input[type=range]::-moz-range-track {
     @include track;
 }
+
 input[type=range]::-webkit-slider-thumb {
     @include thumb;
 }
+
 input[type=range]::-moz-range-thumb {
     @include thumb;
 }

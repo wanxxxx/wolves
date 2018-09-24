@@ -1,28 +1,67 @@
 @charset "UTF-8";
 /* reset */
-body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, textarea, p, blockquote, th, td, input, select, textarea, button {
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+textarea,
+p,
+blockquote,
+th,
+td,
+input,
+select,
+textarea,
+button {
   margin: 0;
   padding: 0; }
 
 /* 初始化标签在所有浏览器中的margin、padding值 */
-fieldset, img {
+fieldset,
+img {
   border: 0 none; }
 
 /* 重置fieldset（表单分组）、图片的边框为0*/
-dl, ul, ol, menu, li {
+dl,
+ul,
+ol,
+menu,
+li {
   list-style: none; }
 
 /* 重置类表前导符号为onne,menu在HTML5中有效 */
-blockquote, q {
+blockquote,
+q {
   quotes: none; }
 
 /* 重置嵌套引用的引号类型 */
-blockquote:before, blockquote:after, q:before, q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
   content: '';
   content: none; }
 
 /* 重置嵌套引用*/
-input, select, textarea, button {
+input,
+select,
+textarea,
+button {
   vertical-align: middle; }
 
 /* 重置表单控件垂直居中*/
@@ -36,7 +75,13 @@ body {
   background: #fff; }
 
 /* 重置body 页面背景为白色 */
-body, th, td, input, select, textarea, button {
+body,
+th,
+td,
+input,
+select,
+textarea,
+button {
   font-size: 20px;
   line-height: 1;
   color: #666; }
@@ -46,11 +91,18 @@ a {
   text-decoration: none; }
 
 /* 重置链接a标签 */
-a:active, a:hover {
+a:active,
+a:hover {
   text-decoration: none; }
 
 /* 重置链接a标签的鼠标滑动效果 */
-address, caption, cite, code, dfn, em, var {
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+var {
   font-style: normal;
   font-weight: normal; }
 
@@ -88,7 +140,8 @@ a:active {
   clear: both; }
 
 /*清除浮动--推荐使用*/
-.clearfix:before, .clearfix:after {
+.clearfix:before,
+.clearfix:after {
   content: '';
   display: table; }
 
@@ -151,7 +204,7 @@ body {
   margin: 0;
   padding: 0; }
   body > div {
-    height: 650px;
+    height: 100vh;
     position: relative;
     min-width: 330px;
     max-width: 800px;
@@ -174,9 +227,11 @@ main {
   border-bottom: 1px solid #eee;
   background: #29bde0;
   color: #FFF; }
-  .header > p, .header > a {
+  .header > p,
+  .header > a {
     margin: 0 2%; }
-  .header a:link, .header a:visited {
+  .header a:link,
+  .header a:visited {
     color: #FFF;
     font-size: 40px; }
 

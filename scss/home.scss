@@ -9,6 +9,20 @@ $blue:#29bde0;
     height: $h;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+
+    >div {
+        height: 100vh;
+        position: relative;
+
+        min-width: 330px;
+        max-width: 800px;
+        width: 100vw;
+    }
+}
+
 .header {
     background: $blue;
 }
@@ -40,7 +54,7 @@ body {
     &-part1 {
         width: 70vw;
         padding: 0 10vm;
-        height: 60px;
+        height: 42px;
         background: #fff;
         margin-top: 80px;
     }
@@ -51,19 +65,23 @@ body {
         background: #fff;
         width: 80vw;
         position: relative;
+        >p {
+            font-size: 11px;
+            margin: 5px;
+        }
 
         >div,
         >hr,
-        >p,
+
         >button {
-            margin: 10px 0
+            margin: 8px 0
         }
         hr {
             background: orange;
         }
         button {
             background: $blue;
-            height: 60px;
+            height: 40px;
             width: 80%;
             color: #fff;
         }

@@ -2,6 +2,7 @@
 body>div {
     background: $blue;
 }
+
 input {
     border: none;
     text-align: center;
@@ -9,7 +10,8 @@ input {
     font-size: 20px;
     color: #fff;
 }
-main{
+
+main {
     margin-bottom: 100px;
     width: 100%;
     .one {
@@ -17,12 +19,12 @@ main{
     }
     >div:nth-child(1) {
         width: 70%;
-        height: 300px;
+        height: 55vh;
         background: #ffedc5;
         border: 3px solid #fff;
         @extend .center3;
         position: relative;
-        margin: 25px 0 20px 0;
+        margin: 30px;
         >span {
             width: 35px;
             height: 35px;
@@ -48,15 +50,19 @@ main{
         }
     }
 }
+
 footer:hover {
     margin-top: 100px;
     box-shadow: 0 0 5px #666 inset;
 }
+
 .btn {
-        width: inherit;
-        color: white;
-        text-align: center;
-    }
-#main2, #btn2 {
+    width: inherit;
+    color: white;
+    text-align: center;
+}
+
+#main2,
+#btn2 {
     display: none;
 }

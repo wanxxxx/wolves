@@ -1,4 +1,14 @@
 /* Scss Document */
+body {
+  margin: 0;
+  padding: 0; }
+  body > div {
+    height: 100vh;
+    position: relative;
+    min-width: 330px;
+    max-width: 800px;
+    width: 100vw; }
+
 .header {
   background: #29bde0; }
 
@@ -15,7 +25,7 @@ body {
   .main-part1 {
     width: 70vw;
     padding: 0 10vm;
-    height: 60px;
+    height: 42px;
     background: #fff;
     margin-top: 80px; }
   .main-part2 {
@@ -25,16 +35,18 @@ body {
     background: #fff;
     width: 80vw;
     position: relative; }
+    .main-part2 > p {
+      font-size: 11px;
+      margin: 5px; }
     .main-part2 > div,
     .main-part2 > hr,
-    .main-part2 > p,
     .main-part2 > button {
-      margin: 10px 0; }
+      margin: 8px 0; }
     .main-part2 hr {
       background: orange; }
     .main-part2 button {
       background: #29bde0;
-      height: 60px;
+      height: 40px;
       width: 80%;
       color: #fff; }
     .main-part2 label {
