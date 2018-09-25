@@ -18,39 +18,41 @@
         <b>狼人杀</b>
         <p></p>
         </header>
-      <main class="main">
-        <p style="font-weight: bold;">
-          玩家配比
-          </p>
-        <div class="part1">
-          <div id="player1">
-            杀手 人
+      <main>
+        <div class="main">
+          <p style="font-weight: bold;">
+            玩家配比
+            </p>
+          <div class="part1">
+            <div id="player1">
+              杀手 人
+              </div>
+            <div id="player2">
+              平民 人
+              </div>
             </div>
-          <div id="player2">
-            平民 人
-            </div>
-          </div>
-<div class="part2">
-      <div>
-            <span style="font-weight: bold;">
-              请输入玩家数量
-              </span>
-            <input id="player" onchange="change1()" type="text" value=""/>
-            <span class="span1">
-              玩家数量为 4 - 18
-              </span>
-            </div>
-          <div id="img">
-            <img alt="-" class="img" height="30" src="img/m.png" width="30" />
-            <img alt="+" class="img" height="30" src="img/a.png" width="30"/>
-            </div>
-          <input id="range" max="18" min="4" oninput="change()" type="range" value=""/>
-          </div>
+  <div class="part2">
+    <div>
+      <span style="font-weight: bold;">
+        请输入玩家数量
+        </span>
+      <input id="player" onchange="change1()" type="text" value=""/>
+      <span class="span1">
+        玩家数量为 4 - 18
+        </span>
+      </div>
+    <div id="img">
+      <img alt="-" class="img" height="30" src="img/m.png" width="30" />
+      <img alt="+" class="img" height="30" src="img/a.png" width="30"/>
+      </div>
+    <input id="range" max="18" min="4" oninput="change()" type="range" value=""/>
+  </div>
+        </div>
         </main>
       <footer class="footer">
-        <a   onclick="fapai()" >
+        <div><a   onclick="fapai()" >
           去发牌
-          </a>
+        </a></div>
         </footer>
     </div>
     </body>

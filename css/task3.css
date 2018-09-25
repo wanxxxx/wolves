@@ -170,7 +170,7 @@ hr {
   align-items: center;
   flex-direction: column; }
 
-.center3, body, footer, main > div:nth-child(1), main > div:nth-child(1) > span {
+.center3, body, footer, footer div, main > div, main > div > div:nth-child(1), main > div > div:nth-child(1) > span {
   display: flex;
   align-items: center;
   justify-content: center; }
@@ -204,6 +204,7 @@ body {
   margin: 0;
   padding: 0; }
   body > div {
+    overflow-y: auto;
     height: 100vh;
     position: relative;
     min-width: 330px;
@@ -212,10 +213,13 @@ body {
     width: 100vw; }
 
 main {
+  overflow-y: auto;
   width: 100%;
   display: flex;
   align-items: center;
   flex-direction: column; }
+  main > div {
+    width: 80%; }
 
 .header {
   width: 100%;
@@ -236,18 +240,23 @@ main {
     font-size: 40px; }
 
 footer {
+  background: #29bde0;
   position: absolute;
-  bottom: 25px;
-  width: 70vw;
-  height: 45px;
-  max-width: 455px;
-  background: #fbb435; }
-  footer a {
-    width: inherit;
-    text-align: center;
-    color: white;
+  width: 100%;
+  height: 70px;
+  bottom: 0;
+  z-index: 1000; }
+  footer div {
+    width: 70%;
     background: #fbb435;
-    border-radius: 5px; }
+    height: 45px;
+    margin-bottom: 25px; }
+    footer div a {
+      width: inherit;
+      text-align: center;
+      color: white;
+      background: #fbb435;
+      border-radius: 5px; }
 
 input {
   border: none;
@@ -269,44 +278,38 @@ input {
   font-size: 20px;
   color: #fff; }
 
-main {
-  margin-bottom: 100px;
-  width: 100%; }
-  main .one {
-    color: #f3425e; }
-  main > div:nth-child(1) {
+main > div .one {
+  color: #f3425e; }
+main > div footer {
+  width: 80%; }
+main > div > div:nth-child(1) {
+  width: 70%;
+  height: 200px;
+  background: #ffedc5;
+  border: 3px solid #fff;
+  position: relative;
+  margin-top: 20vh; }
+  main > div > div:nth-child(1) > span {
+    width: 35px;
+    height: 35px;
+    border: 2px solid #ffedc5;
+    border-radius: 50%;
+    position: absolute;
+    top: -17.5px;
+    background: #fff; }
+    main > div > div:nth-child(1) > span > input {
+      color: #f3425e; }
+  main > div > div:nth-child(1) > div > input {
+    color: #29bde0;
+    margin: 20px;
+    width: 50px; }
+  main > div > div:nth-child(1) > div > div {
+    height: 10px;
     width: 70%;
-    height: 55vh;
-    background: #ffedc5;
-    border: 3px solid #fff;
-    position: relative;
-    margin: 30px; }
-    main > div:nth-child(1) > span {
-      width: 35px;
-      height: 35px;
-      border: 2px solid #ffedc5;
-      border-radius: 50%;
-      position: absolute;
-      top: -17.5px;
-      background: #fff; }
-      main > div:nth-child(1) > span > input {
-        color: #f3425e; }
-    main > div:nth-child(1) > div > input {
-      color: #29bde0;
-      margin: 20px;
-      width: 50px; }
-    main > div:nth-child(1) > div > div {
-      height: 10px;
-      width: 70%;
-      margin: 20px 0;
-      border-top: 2px solid #fff; }
-
-footer:hover {
-  margin-top: 100px;
-  box-shadow: 0 0 5px #666 inset; }
+    margin: 20px 0;
+    border-top: 2px solid #fff; }
 
 .btn {
-  width: inherit;
   color: white;
   text-align: center; }
 

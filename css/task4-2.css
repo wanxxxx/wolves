@@ -170,7 +170,7 @@ hr {
   align-items: center;
   flex-direction: column; }
 
-.center3, body, footer, .main1 input, .main1 .div1, .main1 .div2, .p {
+.center3, body, footer, footer div, .main1 input, .main1 .div1, .main1 .div2, .p {
   display: flex;
   align-items: center;
   justify-content: center; }
@@ -204,6 +204,7 @@ body {
   margin: 0;
   padding: 0; }
   body > div {
+    overflow-y: auto;
     height: 100vh;
     position: relative;
     min-width: 330px;
@@ -212,10 +213,13 @@ body {
     width: 100vw; }
 
 main {
+  overflow-y: auto;
   width: 100%;
   display: flex;
   align-items: center;
   flex-direction: column; }
+  main > div {
+    width: 80%; }
 
 .header {
   width: 100%;
@@ -236,12 +240,17 @@ main {
     font-size: 40px; }
 
 footer {
+  background: #29bde0;
   position: absolute;
-  bottom: 25px;
-  width: 70vw;
-  height: 45px;
-  max-width: 455px;
-  background: #fbb435; }
+  width: 100%;
+  height: 70px;
+  bottom: 0;
+  z-index: 1000; }
+  footer div {
+    width: 70%;
+    background: #fbb435;
+    height: 45px;
+    margin-bottom: 25px; }
   footer a {
     width: inherit;
     text-align: center;
@@ -334,7 +343,8 @@ body > div {
   .main1 .input1 {
     width: 70%;
     display: none;
-    padding-left: 10px; }
+    padding-left: 10px;
+    font-size: 12px; }
   .main1 .input2 {
     color: #29bde0;
     font-weight: bold;

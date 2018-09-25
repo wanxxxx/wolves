@@ -3,21 +3,27 @@
     position: absolute;
     top: $top;
 }
+
 body {
     >div {
         background: #eee;
     }
 }
+
 .show {
     display: flex;
 }
+
 .hide {
     display: none;
 }
+
 #main {
     height: 520px;
-    overflow-y: auto;margin-bottom: 75px;
+    overflow-y: auto;
+    margin-bottom: 75px;
 }
+
 .main1 {
     display: none;
     width: 90%;
@@ -102,6 +108,7 @@ body {
         width: 70%;
         display: none;
         padding-left: 10px;
+        font-size: 12px;
     }
     .input2 {
         color: $blue;
@@ -109,6 +116,7 @@ body {
         padding-left: 10px;
     }
 }
+
 .a {
     background: #b9e9f5;
     @include abs;
@@ -121,6 +129,7 @@ body {
         z-index: 1;
     }
 }
+
 .p {
     background: #24a7c6;
     margin: 12px;
@@ -128,8 +137,10 @@ body {
     width: 125%;
     color: #fff;
     position: relative;
-    @extend .size-m, .center3;
+    @extend .size-m;
+    @extend .center3;
 }
+
 .main {
     &-div {
         width: 351px;
@@ -169,6 +180,7 @@ body {
         }
     }
 }
+
 footer {
     background: $blue;
     width: 100%;

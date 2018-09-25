@@ -4,13 +4,16 @@ body>div {
 }
 
 .main {
+    width: 100%;
+    @extend .center2;
     >div,
     >p {
         width: 90%;
-        margin: 10px;
+        margin-top: 5%;
         background: #fff;
         text-align: center;
         @extend .size-m;
+        @extend .center;
     }
     >p {
         height: 50px;
@@ -19,7 +22,7 @@ body>div {
         box-shadow: 2px 2px 2px #aaa
     }
     .part1 {
-        height: 25vh;
+        height: 100px;
         @extend .center3;
         >div {
             margin: 10%;
@@ -27,7 +30,7 @@ body>div {
     }
     .part2 {
         position: relative;
-        height: 25vh;
+        height: 200px;
         @extend .center2;
         justify-content: center;
         >p,
@@ -38,12 +41,16 @@ body>div {
             font-size: 12px;
             color: orange;
         }
+        input[type=range] {
+            position: absolute;
+            top: 83%;
+        }
         img {
             z-index: 1000;
             width: 20px;
             height: 20px;
             @extend .center-v;
-            top: 80%;
+            top: 83%;
             &:last-child {
                 right: 2%;
             }
@@ -111,4 +118,9 @@ input[type=range]::-webkit-slider-thumb {
 
 input[type=range]::-moz-range-thumb {
     @include thumb;
+}
+
+
+footer {
+    background: #eee;
 }

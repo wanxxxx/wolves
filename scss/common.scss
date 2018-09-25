@@ -2,6 +2,32 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* reset */
 
 body,
@@ -39,12 +65,64 @@ button {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* 初始化标签在所有浏览器中的margin、padding值 */
 
 fieldset,
 img {
     border: 0 none
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -62,12 +140,64 @@ li {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* 重置类表前导符号为onne,menu在HTML5中有效 */
 
 blockquote,
 q {
     quotes: none
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -85,6 +215,32 @@ q:after {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* 重置嵌套引用*/
 
 input,
@@ -93,6 +249,32 @@ textarea,
 button {
     vertical-align: middle
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -108,11 +290,63 @@ button {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* 重置表单button按钮效果 */
 
 body {
     background: #fff
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -134,11 +368,63 @@ button {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* 重置页面文字属性 */
 
 a {
     text-decoration: none
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -149,6 +435,32 @@ a:active,
 a:hover {
     text-decoration: none
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -169,11 +481,63 @@ var {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* 重置样式标签的样式 */
 
 caption {
     display: none;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -190,11 +554,63 @@ table {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* 重置table属性 */
 
 img {
     vertical-align: top
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -218,6 +634,32 @@ a:active {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* 设置页面文字等在拖动鼠标选中情况下的背景色与文字颜色 */
 
 
@@ -232,6 +674,32 @@ a:active {
 .clear {
     clear: both;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -323,7 +791,10 @@ body {
     margin: 0;
     padding: 0;
     @extend .center3;
+    background: #fff;
     >div {
+        overflow-y: auto;
+
         height: 100vh;
         position: relative;
         @extend .center2;
@@ -335,11 +806,15 @@ body {
 }
 
 main {
+    overflow-y: auto;
     width: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
     @extend .size-m;
+    >div {
+        width: 80%;
+    }
 }
 
 .header {
@@ -364,13 +839,20 @@ main {
 }
 
 footer {
+    background: $blue;
     position: absolute;
-    bottom: 25px;
-    width: 70vw;
-    height: 45px;
-    max-width: 650px*0.7;
     @extend .center3;
-    background: #fbb435;
+    width: 100%;
+    height: 70px;
+    bottom: 0;
+    z-index: 1000;
+    div {
+        width: 70%;
+        background: #fbb435;
+        height: 45px;
+        margin-bottom: 25px;
+        @extend .center3;
+    }
     a {
         width: inherit;
         text-align: center;
@@ -379,6 +861,8 @@ footer {
         border-radius: 5px;
     }
 }
+
+footer {}
 
 input {
     border: none;

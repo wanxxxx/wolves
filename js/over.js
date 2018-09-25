@@ -27,17 +27,21 @@ console.log("deadnum:" + deadnum)
 console.log('进行了' + daynum + '天')
 result[0].textContent = result1
 result[1].textContent = result2;
-for (i = 1; i < input.length - 1; i++) {
-    input[2 * i - 2].textContent = +deadnum[2 * i - 2] + '号被杀手杀死,' + deadnum[2 * i - 2] + '号是' + klist[2 * i - 2];
-    input[2 * i - 1].textContent = +deadnum[2 * i - 1] + '号被全民投票投死,' + deadnum[2 * i - 1] + '号是' + klist[2 * i - 1];
+console.log(input)
+for (i = 1; i <= input.length - 1; i++) {
+
     if (klist.length % 2 == 1) {
         input[input.length - 1].textContent = ' ';
-        console.log('ss')
+
+    } else {
+        $.each(deadnum, function(idx) {
+            if (deadnum[idx] == 0) {
+                input[idx].textContent = "无任何操作"
+            }
+        });
+        input[2 * i - 2].textContent = +deadnum[2 * i - 2] + '号被杀手杀死,' + deadnum[2 * i - 2] + '号是' + klist[2 * i - 2];
+        input[2 * i - 1].textContent = +deadnum[2 * i - 1] + '号被全民投票投死,' + deadnum[2 * i - 1] + '号是' + klist[2 * i - 1];
+
     }
+    console.log('ss')
 }
-$.each(deadnum, function(idx) {
-    if (deadnum[idx] == 0) {
-        input[idx].textContent = "无任何操作"
-    }
-    console.log(idx)
-});

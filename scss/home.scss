@@ -1,46 +1,28 @@
 /* Scss Document */
 
+@import"common";
 $blue:#29bde0;
-@mixin flex($ali:center, $jus:center, $w:100vw, $h:60px) {
-    display: flex;
-    align-items: $ali;
-    justify-content: $jus;
-    width: $w;
-    height: $h;
-}
 
-body {
-    margin: 0;
-    padding: 0;
 
-    >div {
-        height: 100vh;
-        position: relative;
-
-        min-width: 330px;
-        max-width: 800px;
-        width: 100vw;
-    }
-}
-
-.header {
-    background: $blue;
-}
 
 @mixin abs ($top:60px) {
     position: absolute;
     top: $top;
 }
 
-$border:1px solid #c4c4c4;
-
 
 body {
-    background: #EEEEEE;
-    width: 100vw;
+
+    >div {
+        background: #eee;
+    }
 }
 
-
+header {
+    img {
+        margin: 2%;
+    }
+}
 
 .main {
     overflow: hidden;
@@ -48,22 +30,48 @@ body {
     transform: translateX(0);
     transition: transform 500ms ease;
     position: relative;
-
-
-
+    width: 100%;
     &-part1 {
-        width: 70vw;
-        padding: 0 10vm;
+        width: 70%;
         height: 42px;
         background: #fff;
-        margin-top: 80px;
+        margin-top: 10%;
+        padding: 0 5%;
+    }
+    .slide {
+        overflow: hidden;
+        width: 80%;
+        >ul {
+            width: 300%;
+            transition: all 0.5s;
+            >li {
+                float: left;
+                width: 33.333333%;
+            }
+        }
+        input[name="sildeInput"] {
+            display: none;
+        }
+        .bottom {
+            width: 40px;
+            position: absolute;
+            bottom: 2px;
+            left: 50%;
+            transform: translate(-50%, 0);
+            label {
+                width: 10px;
+                height: 10px;
+                background: #c4c4c4;
+                border-radius: 50%;
+            }
+        }
     }
     &-part2 {
         flex-direction: column;
         justify-content: center;
-        margin: 20px 0;
+        margin: 10% 0;
         background: #fff;
-        width: 80vw;
+        width: 100%;
         position: relative;
         >p {
             font-size: 11px;
@@ -82,76 +90,42 @@ body {
         button {
             background: $blue;
             height: 40px;
-            width: 80%;
+            width: 70%;
             color: #fff;
         }
         label {
             @include abs(50%);
-            right: 1vw;
+            right: 1%;
             height: 0;
             width: 0;
             border-left: 16px solid orange;
             border-top: 16px solid transparent;
             border-bottom: 16px solid transparent;
-            z-index: 1000;
         }
         .label2 {
-            left: 1vw;
+            left: 1%;
             border-left: none;
             border-right: 16px solid orange;
         }
     }
 }
 
-.slide {
-    overflow: hidden;
-    width: 80vw;
-    >ul {
-        width: 9999px;
-        transition: all 0.5s;
-        >li {
-            float: left;
-        }
-    }
-    input[name="sildeInput"] {
-        display: none;
-    }
-    .bottom {
-        width: 40px;
-        position: absolute;
-        bottom: 2px;
-        left: 50%;
-        transform: translate(-50%, 0);
 
 
-        label {
-            width: 10px;
-            height: 10px;
-            background: #c4c4c4;
-            border-radius: 50%;
-        }
-    }
-}
-
-#sildeInput1:checked~ul {
-    margin-left: 0;
-}
-
-#sildeInput2:checked~ul {
-    margin-left: -80vw;
-}
-
-#sildeInput3:checked~ul {
-    margin-left: -160vw;
-}
-
+#sildeInput1:checked~ul,
 #leftInput1:checked~ul {
     margin-left: 0;
 }
 
+#sildeInput2:checked~ul,
 #leftInput2:checked~ul {
-    margin-left: -80vw;
+    margin-left: -100%;
 }
+
+#sildeInput3:checked~ul {
+    margin-left: -200%;
+}
+
 
 #menu {
     display: none;
@@ -174,7 +148,6 @@ body {
     background: #fff;
     height: 100%;
     box-shadow: #a0a1a2 -2px 0 10px inset;
-
     >div {
         border-bottom: $border;
         padding: 10px 8px;
