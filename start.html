@@ -1,61 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta content="width=device-width,initial-scale=1,maximum-scale=1.0, user-scalable=no" name="viewport"/>
-        <meta charset="utf-8"/>
-        <title>
-            配比页
-        </title>
-        <link href="css/task2.css" rel="stylesheet" type="text/css"/>
-       
-        <script src="js/jquery-3.2.1.min.js">
-        </script>
-    </head>
-    <body>
+
+<head>
+    <meta content="width=device-width,initial-scale=1,maximum-scale=1.0, user-scalable=no" name="viewport" />
+    <meta charset="utf-8" />
+    <title>
+        配比页
+    </title>
+    <link href="css/task2.css" rel="stylesheet" type="text/css" />
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="http://at.alicdn.com/t/font_852195_fawati2lz6u.js">
+    </script>
+</head>
+
+<body>
     <div>
-      <header class="header">
-        <p></p>
-        <b>狼人杀</b>
-        <p></p>
+        <header class="header">
+            <a href="home.html" class="fa fa-caret-left"></a>
+            <p> 玩家配比</p>
+            <a href="home.html">×</a>
         </header>
-      <main>
-        <div class="main">
-          <p style="font-weight: bold;">
-            玩家配比
-            </p>
-          <div class="part1">
-            <div id="player1">
-              杀手 人
-              </div>
-            <div id="player2">
-              平民 人
-              </div>
+        <main>
+            <div class="main">
+                <div class="part1">
+                    <div>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-Artboard"></use>
+                        </svg>
+                        <div id="player1">
+                            狼人 人 </div>
+                    </div>
+                    <div>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-rentipaodan"></use>
+                        </svg>
+                        <div id="player2">
+                            平民 人
+                        </div>
+                    </div>
+                </div>
+                <div class="part2">
+                    <div>
+                        <span style="font-weight: bold;">请输入玩家数量 </span>
+                        <input id="player" onchange="change1()" type="text" value="" />
+                        <span class="span1"> 玩家数量为 4 - 18 </span>
+                    </div>
+                    <div class="range">
+                        <div class="span fa fa-plus-square"></div>
+                        <input id="range" max="18" min="4" oninput="change()" type="range" value="" />
+                        <div class="span fa fa-minus-square"></div>
+                    </div>
+                </div>
             </div>
-  <div class="part2">
-    <div>
-      <span style="font-weight: bold;">
-        请输入玩家数量
-        </span>
-      <input id="player" onchange="change1()" type="text" value=""/>
-      <span class="span1">
-        玩家数量为 4 - 18
-        </span>
-      </div>
-    <div id="img">
-      <img alt="-" class="img" height="30" src="img/m.png" width="30" />
-      <img alt="+" class="img" height="30" src="img/a.png" width="30"/>
-      </div>
-    <input id="range" max="18" min="4" oninput="change()" type="range" value=""/>
-  </div>
-        </div>
         </main>
-      <footer class="footer">
-        <div><a   onclick="fapai()" >
+        <footer class="footer">
+            <div><a onclick="fapai()">
           去发牌
         </a></div>
         </footer>
     </div>
-    </body>
-    <script src="js/task2.js">
-    </script>
+</body>
+<script src="js/task2.js">
+</script>
+
 </html>

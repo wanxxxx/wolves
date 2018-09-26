@@ -1,8 +1,4 @@
 @import'common';
-body>div {
-    background: $blue;
-}
-
 input {
     border: none;
     text-align: center;
@@ -10,9 +6,7 @@ input {
     font-size: 20px;
     color: #fff;
 }
-
 main>div {
-
     @extend .center3;
     .one {
         color: #f3425e
@@ -53,14 +47,10 @@ main>div {
         }
     }
 }
-
-
 .btn {
-
     color: white;
     text-align: center;
 }
-
 #main2,
 #btn2 {
     display: none;

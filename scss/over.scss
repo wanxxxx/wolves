@@ -8,6 +8,14 @@ $blue:#5fc0cd;
     height: $h;
 }
 
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
 $border:1px solid #c4c4c4;
 * {
     justify-content: auto;
@@ -17,10 +25,15 @@ main {
     overflow-y: auto;
 }
 
+header {
+    svg {
+        font-size: 24px;
+    }
+}
+
 .main {
     overflow-y: auto;
     width: 100%;
-    height: 650px;
     >div {
         width: 80%;
         @extend .center2;
@@ -29,14 +42,16 @@ main {
         padding: 95px 0;
         position: relative;
         @extend .center2;
+        >svg {
+            font-size: 50px;
+            position: absolute;
+            top: 100px;
+        }
         .img1 {
             @include abs(70px);
         }
-        .img2 {
-            @include abs(60px);
-        }
-        >p {
-            @include abs(149px);
+        >span {
+            @include abs(183px);
             font-weight: bold;
             color: white;
             white-space: nowrap
@@ -47,7 +62,7 @@ main {
         p {
             width: 100px;
             @extend .size-m;
-            color: white;
+            color: #000;
             text-align: left;
             margin: 7px;
         }
@@ -73,18 +88,6 @@ main {
     }
 }
 
-footer {
-    background: #29bde0;
-    width: 90%;
-    max-width: 90%;
-    height: 70px;
-    position: absolute;
-    bottom: 0;
-    div {
-        width: 70%;
-        background: #fbb435;
-        height: 45px;
-        margin-bottom: 25px;
-        @extend .center3;
-    }
+.end {
+    font-size: 12px;
 }

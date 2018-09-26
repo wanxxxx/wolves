@@ -1,33 +1,5 @@
 @charset "utf-8";
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* reset */
 
 body,
@@ -63,68 +35,12 @@ button {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* 初始化标签在所有浏览器中的margin、padding值 */
 
 fieldset,
 img {
     border: 0 none
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* 重置fieldset（表单分组）、图片的边框为0*/
@@ -138,68 +54,12 @@ li {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* 重置类表前导符号为onne,menu在HTML5中有效 */
 
 blockquote,
 q {
     quotes: none
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* 重置嵌套引用的引号类型 */
@@ -213,34 +73,6 @@ q:after {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* 重置嵌套引用*/
 
 input,
@@ -249,34 +81,6 @@ textarea,
 button {
     vertical-align: middle
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* 重置表单控件垂直居中*/
@@ -288,67 +92,11 @@ button {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* 重置表单button按钮效果 */
 
 body {
     background: #fff
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* 重置body 页面背景为白色 */
@@ -366,67 +114,11 @@ button {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* 重置页面文字属性 */
 
 a {
     text-decoration: none
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* 重置链接a标签 */
@@ -435,34 +127,6 @@ a:active,
 a:hover {
     text-decoration: none
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* 重置链接a标签的鼠标滑动效果 */
@@ -479,67 +143,11 @@ var {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* 重置样式标签的样式 */
 
 caption {
     display: none;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* 重置表格标题为隐藏 */
@@ -552,67 +160,11 @@ table {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* 重置table属性 */
 
 img {
     vertical-align: top
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* 图片在当前行内的垂直位置 */
@@ -632,34 +184,6 @@ a:active {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* 设置页面文字等在拖动鼠标选中情况下的背景色与文字颜色 */
 
 
@@ -674,34 +198,6 @@ a:active {
 .clear {
     clear: both;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /*清除浮动--推荐使用*/
@@ -724,7 +220,7 @@ hr {
     padding: 0
 }
 
-$blue:#29bde0;
+$blue:#7bafd4;
 $border:1px solid #eee;
 * {
     padding: 0;
@@ -794,13 +290,12 @@ body {
     background: #fff;
     >div {
         overflow-y: auto;
-
         height: 100vh;
         position: relative;
         @extend .center2;
         min-width: 330px;
         max-width: 800px;
-        background: $blue;
+        background: #eee;
         width: 100vw;
     }
 }
@@ -829,7 +324,7 @@ main {
     color: #FFF;
     >p,
     >a {
-        margin: 0 2%;
+        margin: 0 5%;
     }
     a:link,
     a:visited {
@@ -839,7 +334,7 @@ main {
 }
 
 footer {
-    background: $blue;
+    background: #eee;
     position: absolute;
     @extend .center3;
     width: 100%;
@@ -848,7 +343,7 @@ footer {
     z-index: 1000;
     div {
         width: 70%;
-        background: #fbb435;
+        background: $blue;
         height: 45px;
         margin-bottom: 25px;
         @extend .center3;
@@ -857,7 +352,7 @@ footer {
         width: inherit;
         text-align: center;
         color: white;
-        background: #fbb435;
+        background: $blue;
         border-radius: 5px;
     }
 }

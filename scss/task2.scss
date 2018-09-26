@@ -2,7 +2,16 @@
 body>div {
     background: #eee;
 }
-
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+}
 .main {
     width: 100%;
     @extend .center2;
@@ -25,37 +34,35 @@ body>div {
         height: 100px;
         @extend .center3;
         >div {
-            margin: 10%;
+            margin: 0 10%;
+            @extend .center;
         }
     }
     .part2 {
         position: relative;
         height: 200px;
         @extend .center2;
-        justify-content: center;
-        >p,
-        >div {
-            margin: 15px 0;
+        >div:nth-child(1) {
+            margin-top: 50px;
         }
         .span1 {
             font-size: 12px;
-            color: orange;
+            color: $blue;
         }
-        input[type=range] {
+        .range {
             position: absolute;
-            top: 83%;
-        }
-        img {
-            z-index: 1000;
-            width: 20px;
-            height: 20px;
-            @extend .center-v;
-            top: 83%;
-            &:last-child {
-                right: 2%;
+            top: 70%;
+            width: 90%;
+            height: 40px;
+            @extend .center;
+            >input,
+            >div {
+                display: inline-block;
             }
-            &:first-child {
-                left: 2%;
+            .span {
+                font-size: 25px;
+                color: $blue;
+                margin: 0 2%;
             }
         }
         #player {
@@ -63,19 +70,17 @@ body>div {
             width: 30px;
             height: 30px;
             background: #eee;
-            color: orange;
+            color: $blue;
         }
     }
 }
-
 @mixin track {
     height: 3px;
     border-radius: 1px;
     /*将轨道设为圆角的*/
-    width: 80%;
-    background: orange;
+    width: 100%;
+    background: $blue;
 }
-
 @mixin thumb {
     -webkit-appearance: none;
     height: 23px;
@@ -85,42 +90,33 @@ body>div {
     background: #fff;
     border-radius: 5px;
     /*外观设置为圆形*/
-    border: solid 2px orange;
+    border: solid 2px $blue;
     /*设置边框*/
 }
-
 input[type=range] {
     -webkit-appearance: none;
     border-radius: 10px;
     /*这个属性设置使填充进度条时的图形为圆角*/
-    width: 80%;
+    width: 65%;
 }
-
 input[type=range]::-webkit-slider-thumb {
     -webkit-appearance: none;
 }
-
 input[type=range]:focus {
     outline: none;
 }
-
 input[type=range]::-webkit-slider-runnable-track {
     @include track;
 }
-
 input[type=range]::-moz-range-track {
     @include track;
 }
-
 input[type=range]::-webkit-slider-thumb {
     @include thumb;
 }
-
 input[type=range]::-moz-range-thumb {
     @include thumb;
 }
-
-
 footer {
     background: #eee;
 }

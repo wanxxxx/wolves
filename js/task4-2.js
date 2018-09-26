@@ -32,7 +32,7 @@ for (i = 0; i < 2 * msg.length; i++) {
     if (deadnum[i] == 0) {
         input1[i].textContent = '没有进行任何操作'
     } else {
-        input1[i].textContent = deadnum[i] + '号被杀手杀死，真实身份是' + msg[deadnum[i] - 1];
+        input1[i].textContent = deadnum[i] + '号被狼人杀死，真实身份是' + msg[deadnum[i] - 1];
     }
 }
 console.log(msg[deadnum[i]])
@@ -179,19 +179,25 @@ $.each(klist, function(idx) {
     if (klist[idx] == '平民') {
         p.push(idx)
     }
-    if (klist[idx] == '杀手') {
+    if (klist[idx] == '狼人') {
         k.push(idx)
     }
 });
-if (k.length == killernum || killernum - k.length>=msg.length - killernum - p.length) {
+if (k.length == killernum || killernum - k.length >= msg.length - killernum - p.length) {
     sessionStorage.klist = JSON.stringify(klist);
     window.location.href = 'over.html '
-    console.log("杀手" + (killernum - k.length) + '人')
+    console.log("狼人" + (killernum - k.length) + '人')
     console.log('平民' + (msg.length - killernum - p.length) + '人')
 } else {
     console.log('出问题啦')
 }
-sessionStorage.setItem('result1', "杀手" + (killernum - k.length) + '人');
+if (k.length == killernum) {
+    sessionStorage.setItem('result', "平民胜利");
+}
+if (killernum - k.length >= msg.length - killernum - p.length) {
+    sessionStorage.setItem('result', "狼人胜利");
+}
+sessionStorage.setItem('result1', "狼人" + (killernum - k.length) + '人');
 sessionStorage.setItem('result2', '平民' + (msg.length - killernum - p.length) + '人');
 console.log('daynum=' + daynum);
 

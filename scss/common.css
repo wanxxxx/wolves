@@ -202,14 +202,15 @@ hr {
 
 body {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  background: #fff; }
   body > div {
     overflow-y: auto;
     height: 100vh;
     position: relative;
     min-width: 330px;
     max-width: 800px;
-    background: #29bde0;
+    background: #eee;
     width: 100vw; }
 
 main {
@@ -229,18 +230,18 @@ main {
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid #eee;
-  background: #29bde0;
+  background: #7bafd4;
   color: #FFF; }
   .header > p,
   .header > a {
-    margin: 0 2%; }
+    margin: 0 5%; }
   .header a:link,
   .header a:visited {
     color: #FFF;
     font-size: 40px; }
 
 footer {
-  background: #29bde0;
+  background: #eee;
   position: absolute;
   width: 100%;
   height: 70px;
@@ -248,14 +249,14 @@ footer {
   z-index: 1000; }
   footer div {
     width: 70%;
-    background: #fbb435;
+    background: #7bafd4;
     height: 45px;
     margin-bottom: 25px; }
   footer a {
     width: inherit;
     text-align: center;
     color: white;
-    background: #fbb435;
+    background: #7bafd4;
     border-radius: 5px; }
 
 input {

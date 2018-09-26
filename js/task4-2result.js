@@ -49,10 +49,10 @@ $("#btn2").click(function() {
             sessionStorage.deadnum = JSON.stringify(deadnum);
             window.location.href = 'book.html';
         }
-    } else if (killed == "杀手" && checknum == 1) {
+    } else if (killed == "狼人" && checknum == 1) {
         console.log('1')
         console.log(aaa)
-        alert("你是杀手不能杀死本职业，请选择其他玩家杀死")
+        alert("你是狼人不能杀死本职业，请选择其他玩家杀死")
     } else { //点击过玩家
         var deadthis = +sessionStorage.getItem('deadthis');
         var killed = $(".img-click").prev().prev();

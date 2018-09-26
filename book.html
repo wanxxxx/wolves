@@ -1,79 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta content="width=device-width,initial-scale=1,maximum-scale=1.0, user-scalable=no" name="viewport"/>
-        <meta charset="utf-8"/>
-        <title>
-            配比页
-        </title>
-        <link href="css/task4-2.css" rel="stylesheet" type="text/css"/>
-        <script src="js/jquery-3.2.1.min.js">
-        </script>
-        <script src="js/state-machine.js">
-        </script>
-    </head>
-    <body id="body">
-        <div>
-            <header class="header">
-<a href="diary.html">‹</a>
-<p>
-        法官台本
-    </p>
 
-<a href="start.html">×</a>
-          </header>
-            <main id="main">
-                <div class="main1">
-                    <div class="div1">
-                        <p class="input2">
-                            第0天
-                        </p>
-                    </div>
-                    <div class="div2">
-                        <span class="line">
-                        </span>
-                        <div>
-                            <div class="btn">
-                                <img alt="" src="img/moon.png">
-                                    <p class="p">
-                                        杀手杀人
-                                    </p>
-                                </img>
-                            </div>
-                            <p class="input1">
+<head>
+    <meta content="width=device-width,initial-scale=1,maximum-scale=1.0, user-scalable=no" name="viewport" />
+    <meta charset="utf-8" />
+    <title>
+        配比页
+    </title>
+    <link href="css/task4-2.css" rel="stylesheet" type="text/css" />
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="js/jquery-3.2.1.min.js">
+    </script>
+    <script src="js/state-machine.js">
+    </script>
+    <script src="http://at.alicdn.com/t/font_852195_xd9ul79q8p.js">
+    </script>
+</head>
+
+<body id="body">
+    <div>
+        <header class="header">
+            <a href="home.html" class="fa fa-caret-left"></a>
+            <p>
+                法官台本
+            </p>
+<a href="home.html">×</a>
+        </header>
+        <main id="main">
+            <div class="main1">
+                <div class="div1">
+                    <p class="input2">
+                        第0天
+                    </p>
+                </div>
+                <div class="div2">
+                    <span class="line"> </span>
+                    <div>
+                        <div class="btn">
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-yueliang"></use>
+                            </svg>
+                            <p class="p">
+                                杀手杀人
                             </p>
-                            <div class="btn">
-                                <img alt="" src="img/sun.png"/>
-                                <p class="p">
-                                    亡灵发表遗言
-                                </p>
-                            </div>
-                            <div class="btn">
-                                <p class="p">
-                                    玩家依次发言
-                                </p>
-                            </div>
-                            <div class="btn">
-                                <p class="p">
-                                    全民投票
-                                </p>
-                            </div>
-                            <p class="input1">
+                            </img>
+                        </div>
+                        <p class="input1">
+                        </p>
+                        <div class="btn">
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-taiyang"></use>
+                            </svg>
+                            <p class="p">
+                                亡灵发表遗言
                             </p>
                         </div>
+                        <div class="btn">
+                            <p class="p">
+                                玩家依次发言
+                            </p>
+                        </div>
+                        <div class="btn">
+                            <p class="p">
+                                全民投票
+                            </p>
+                        </div>
+                        <p class="input1">
+                        </p>
                     </div>
                 </div>
-            </main>
-            <footer>
+            </div>
+        </main>
+        <div class="blank"></div>
+        <footer>
+            <div>
                 <a onclick="end()">
                     结束游戏
                 </a>
                 <a href="diary2.html">
                     法官日志
-                </a>
-            </footer>
-        </div>
-        <script src="js/task4-2.js">
-        </script>
-    </body>
+                </a></div>
+        </footer>
+    </div>
+    <script src="js/task4-2.js">
+    </script>
+</body>
+
 </html>

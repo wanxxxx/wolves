@@ -1,7 +1,6 @@
 var range = document.getElementById('range')
-var img = document.getElementsByClassName('img')
+var img = document.getElementsByClassName('span')
 var player = document.getElementById('player')
-
 function arra(m) { //1-m的随机排列数组
     var arr = new Array(m);
     arr[0] = 0;
@@ -23,7 +22,6 @@ img[1].onclick = function() {
     player.value = range.value;
     change()
 }
-
 function change1() {
     range.value = player.value;
     if (player.value > 3 && player.value < 19) {
@@ -56,11 +54,11 @@ function change() {
     for (i = 0; i < player.value; i++) { //全赋予平民
         msg[i] = "平民";
     }
-    for (i = 0; i < killer; i++) { //随机赋予杀手
-        msg[arr1[i]] = "杀手";
+    for (i = 0; i < killer; i++) { //随机赋予狼人
+        msg[arr1[i]] = "狼人";
     }
     sessionStorage.msg = JSON.stringify(msg);
-    $('#player1').text('杀手' + killer + '人');
+    $('#player1').text('狼人' + killer + '人');
     $('#player2').text('平民' + (player.value - killer) + '人');
 }
 //------------------发牌

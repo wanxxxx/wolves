@@ -161,7 +161,7 @@ hr {
   font-family: arial; }
 
 .center, .main > div,
-.main > p {
+.main > p, .main .part1 > div, .main .part2 .range {
   display: flex;
   align-items: center;
   justify-content: space-between; }
@@ -212,7 +212,7 @@ body {
     position: relative;
     min-width: 330px;
     max-width: 800px;
-    background: #29bde0;
+    background: #eee;
     width: 100vw; }
 
 main {
@@ -232,18 +232,18 @@ main {
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid #eee;
-  background: #29bde0;
+  background: #7bafd4;
   color: #FFF; }
   .header > p,
   .header > a {
-    margin: 0 2%; }
+    margin: 0 5%; }
   .header a:link,
   .header a:visited {
     color: #FFF;
     font-size: 40px; }
 
 footer {
-  background: #29bde0;
+  background: #eee;
   position: absolute;
   width: 100%;
   height: 70px;
@@ -251,14 +251,14 @@ footer {
   z-index: 1000; }
   footer div {
     width: 70%;
-    background: #fbb435;
+    background: #7bafd4;
     height: 45px;
     margin-bottom: 25px; }
   footer a {
     width: inherit;
     text-align: center;
     color: white;
-    background: #fbb435;
+    background: #7bafd4;
     border-radius: 5px; }
 
 input {
@@ -266,13 +266,23 @@ input {
   text-align: center;
   background: none; }
 
-.center-v, .main .part2 img {
+.center-v {
   position: absolute;
   top: 50%;
   transform: translatey(-50%); }
 
 body > div {
   background: #eee; }
+
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+  font-size: 20px;
+  font-weight: bold;
+  color: #000; }
 
 .main {
   width: 100%; }
@@ -289,41 +299,39 @@ body > div {
   .main .part1 {
     height: 100px; }
     .main .part1 > div {
-      margin: 10%; }
+      margin: 0 10%; }
   .main .part2 {
     position: relative;
-    height: 200px;
-    justify-content: center; }
-    .main .part2 > p,
-    .main .part2 > div {
-      margin: 15px 0; }
+    height: 200px; }
+    .main .part2 > div:nth-child(1) {
+      margin-top: 50px; }
     .main .part2 .span1 {
       font-size: 12px;
-      color: orange; }
-    .main .part2 input[type=range] {
+      color: #7bafd4; }
+    .main .part2 .range {
       position: absolute;
-      top: 83%; }
-    .main .part2 img {
-      z-index: 1000;
-      width: 20px;
-      height: 20px;
-      top: 83%; }
-      .main .part2 img:last-child {
-        right: 2%; }
-      .main .part2 img:first-child {
-        left: 2%; }
+      top: 70%;
+      width: 90%;
+      height: 40px; }
+      .main .part2 .range > input,
+      .main .part2 .range > div {
+        display: inline-block; }
+      .main .part2 .range .span {
+        font-size: 25px;
+        color: #7bafd4;
+        margin: 0 2%; }
     .main .part2 #player {
       border: 1px solid #eee;
       width: 30px;
       height: 30px;
       background: #eee;
-      color: orange; }
+      color: #7bafd4; }
 
 input[type=range] {
   -webkit-appearance: none;
   border-radius: 10px;
   /*这个属性设置使填充进度条时的图形为圆角*/
-  width: 80%; }
+  width: 65%; }
 
 input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none; }
@@ -335,15 +343,15 @@ input[type=range]::-webkit-slider-runnable-track {
   height: 3px;
   border-radius: 1px;
   /*将轨道设为圆角的*/
-  width: 80%;
-  background: orange; }
+  width: 100%;
+  background: #7bafd4; }
 
 input[type=range]::-moz-range-track {
   height: 3px;
   border-radius: 1px;
   /*将轨道设为圆角的*/
-  width: 80%;
-  background: orange; }
+  width: 100%;
+  background: #7bafd4; }
 
 input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
@@ -354,7 +362,7 @@ input[type=range]::-webkit-slider-thumb {
   background: #fff;
   border-radius: 5px;
   /*外观设置为圆形*/
-  border: solid 2px orange;
+  border: solid 2px #7bafd4;
   /*设置边框*/ }
 
 input[type=range]::-moz-range-thumb {
@@ -366,7 +374,7 @@ input[type=range]::-moz-range-thumb {
   background: #fff;
   border-radius: 5px;
   /*外观设置为圆形*/
-  border: solid 2px orange;
+  border: solid 2px #7bafd4;
   /*设置边框*/ }
 
 footer {
