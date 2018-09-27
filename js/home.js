@@ -13,7 +13,7 @@ function change() {
     });
 }
 $('div').click(function() {
-    $("main").animate({
+    $(".main1").animate({
         top: '-100vh',
         opacity: '0',
     }, 2000, );

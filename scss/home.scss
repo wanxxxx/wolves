@@ -289,16 +289,36 @@ body {
     @extend .center3;
     color: $blue;
     background: #fff;
-    >main {
-        overflow-y: auto;
+    main {
         height: 100vh;
-        position: relative;
-        @extend .center2;
-        min-width: 330px;
-        max-width: 800px;
-        background: #eee;
-        width: 100vw;
-        top: 0;
+        overflow-y: hidden;
+        >div {
+            height: 100vh;
+            position: relative;
+            @extend .center2;
+            background: #eee;
+            width: 100vw;
+            min-width: 330px;
+            max-width: 800px;
+            top: -100vh;
+        }
+    }
+    .main2 {
+        background: url(../img/bg4.png) no-repeat center center;
+        background-size: 100% 100%;
+        -moz-background-size: 100% 100%;
+        >div {
+            width: 80%;
+            margin-top: 10%;
+            color: #000;
+            >h3,
+            >p {
+                line-height: 1.5em;
+            }
+            >p {
+                font-size: 12px;
+            }
+        }
     }
 }
 
