@@ -1,158 +1,338 @@
-/* Scss Document */
+@charset "utf-8";
 
-@import"common";
-$blue:#29bde0;
+/* reset */
 
-
-
-@mixin abs ($top:60px) {
-    position: absolute;
-    top: $top;
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+textarea,
+p,
+blockquote,
+th,
+td,
+input,
+select,
+textarea,
+button {
+    margin: 0;
+    padding: 0
 }
 
+
+/* 初始化标签在所有浏览器中的margin、padding值 */
+
+fieldset,
+img {
+    border: 0 none
+}
+
+
+/* 重置fieldset（表单分组）、图片的边框为0*/
+
+dl,
+ul,
+ol,
+menu,
+li {
+    list-style: none
+}
+
+
+/* 重置类表前导符号为onne,menu在HTML5中有效 */
+
+blockquote,
+q {
+    quotes: none
+}
+
+
+/* 重置嵌套引用的引号类型 */
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none
+}
+
+
+/* 重置嵌套引用*/
+
+input,
+select,
+textarea,
+button {
+    vertical-align: middle
+}
+
+
+/* 重置表单控件垂直居中*/
+
+button {
+    border: 0 none;
+    background-color: transparent;
+    cursor: pointer
+}
+
+
+/* 重置表单button按钮效果 */
 
 body {
-
-    >div {
-        background: #eee;
-    }
-}
-
-header {
-    img {
-        margin: 2%;
-    }
-}
-
-.main {
-    overflow: hidden;
-    flex-direction: column;
-    transform: translateX(0);
-    transition: transform 500ms ease;
-    position: relative;
-    width: 100%;
-    &-part1 {
-        width: 70%;
-        height: 42px;
-        background: #fff;
-        margin-top: 10%;
-        padding: 0 5%;
-    }
-    .slide {
-        overflow: hidden;
-        width: 80%;
-        >ul {
-            width: 300%;
-            transition: all 0.5s;
-            >li {
-                float: left;
-                width: 33.333333%;
-            }
-        }
-        input[name="sildeInput"] {
-            display: none;
-        }
-        .bottom {
-            width: 40px;
-            position: absolute;
-            bottom: 2px;
-            left: 50%;
-            transform: translate(-50%, 0);
-            label {
-                width: 10px;
-                height: 10px;
-                background: #c4c4c4;
-                border-radius: 50%;
-            }
-        }
-    }
-    &-part2 {
-        flex-direction: column;
-        justify-content: center;
-        margin: 10% 0;
-        background: #fff;
-        width: 100%;
-        position: relative;
-        >p {
-            font-size: 11px;
-            margin: 5px;
-        }
-
-        >div,
-        >hr,
-
-        >button {
-            margin: 8px 0
-        }
-        hr {
-            background: orange;
-        }
-        button {
-            background: $blue;
-            height: 40px;
-            width: 70%;
-            color: #fff;
-        }
-        label {
-            @include abs(50%);
-            right: 1%;
-            height: 0;
-            width: 0;
-            border-left: 16px solid orange;
-            border-top: 16px solid transparent;
-            border-bottom: 16px solid transparent;
-        }
-        .label2 {
-            left: 1%;
-            border-left: none;
-            border-right: 16px solid orange;
-        }
-    }
+    background: #fff
 }
 
 
+/* 重置body 页面背景为白色 */
 
-#sildeInput1:checked~ul,
-#leftInput1:checked~ul {
-    margin-left: 0;
+body,
+th,
+td,
+input,
+select,
+textarea,
+button {
+    font-size: 20px;
+    line-height: 1;
+    color: #666
 }
 
-#sildeInput2:checked~ul,
-#leftInput2:checked~ul {
-    margin-left: -100%;
+
+/* 重置页面文字属性 */
+
+a {
+    text-decoration: none
 }
 
-#sildeInput3:checked~ul {
-    margin-left: -200%;
+
+/* 重置链接a标签 */
+
+a:active,
+a:hover {
+    text-decoration: none
 }
 
 
-#menu {
+/* 重置链接a标签的鼠标滑动效果 */
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+var {
+    font-style: normal;
+    font-weight: normal
+}
+
+
+/* 重置样式标签的样式 */
+
+caption {
     display: none;
-
-    &:checked~.main2 {
-        left: 0;
-    }
-    &:checked~.main {
-        transform: translateX(65vw);
-        transition: transform 500ms ease;
-    }
 }
 
-.main2 {
-    position: fixed;
-    top: 60px;
-    left: -70vw;
-    width: 70vw;
+
+/* 重置表格标题为隐藏 */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    table-layout: fixed;
+}
+
+
+/* 重置table属性 */
+
+img {
+    vertical-align: top
+}
+
+
+/* 图片在当前行内的垂直位置 */
+
+
+/* 页面设置 */
+
+
+/* 取消a标签点击后的虚线框 */
+
+a {
+    outline: none;
+}
+
+a:active {
+    star: expression(this.onFocus=this.blur());
+}
+
+
+/* 设置页面文字等在拖动鼠标选中情况下的背景色与文字颜色 */
+
+
+/*
+::selection {color: #fff;background-color: #4C6E78;}
+::-moz-selection {color: #fff;background-color: #4C6E78;}
+*/
+
+
+/*清除浮动*/
+
+.clear {
+    clear: both;
+}
+
+
+/*清除浮动--推荐使用*/
+
+.clearfix:before,
+.clearfix:after {
+    content: '';
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+hr {
+    width: 100%;
+    border: none;
+    height: 1px;
+    margin: 0;
+    padding: 0
+}
+
+$blue:#7bafd4;
+$border:1px solid #eee;
+* {
+    padding: 0;
+    margin: 0;
+    font-family: arial;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.center2 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.center3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.padding-a {
+    padding: 0 5vw
+}
+
+.padding-b {
+    padding: 10px 0;
+}
+
+.size-l {
+    font-size: 18px;
+}
+
+.size-m {
+    font-size: 16px;
+}
+
+.size-s {
+    font-size: 12px;
+}
+
+.center-y {
+    position: absolute;
+    top: 50%;
+    transform: translatey(-50%)
+}
+
+.center-x {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%)
+}
+
+@mixin abs($t:50px) {
+    position: absolute;
+    top: $t;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    @extend .center3;
     color: $blue;
     background: #fff;
-    height: 100%;
-    box-shadow: #a0a1a2 -2px 0 10px inset;
-    >div {
-        border-bottom: $border;
-        padding: 10px 8px;
-        .center {
-            width: 25vw
-        }
+    >main {
+        overflow-y: auto;
+        height: 100vh;
+        position: relative;
+        @extend .center2;
+        min-width: 330px;
+        max-width: 800px;
+        background: #eee;
+        width: 100vw;
+        top: 0;
+    }
+}
+
+img:nth-child(1) {
+    width: 70%;
+    position: absolute;
+    top: 38%;
+    transform: translatey(-38%);
+    left: -80%;
+    z-index: 1000;
+}
+
+img:nth-child(2) {
+    width: 40%;
+    position: absolute;
+    top: 60%;
+    transform: translatey(60%);
+    left: 30%;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.rule {
+    position: absolute;
+    bottom: 40px;
+    @extend .center;
+    right: 5%;
+    font-size: 13px;
+    color: #aa001d;
+    font-weight: bold;
+    cursor: pointer;
+    i {
+        font-size: 20px;
+        margin: 10px;
     }
 }

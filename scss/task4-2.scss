@@ -1,199 +1,201 @@
-@import'common';
-@mixin abs ($top:60px) {
-    position: absolute;
-    top: $top;
-}
-
-.icon {
-    width: 1em;
-    height: 1em;
-    vertical-align: -0.15em;
-    fill: currentColor;
-    overflow: hidden;
-    font-size: 25px;
-    position: absolute;
-    transform: translatex(-50%);
-    border: $border;
-    border-radius: 50%;
-    background: #fff;
-    margin-right: 5%;
-    left: 0;
-}
-
-body {
-    >div {
-        background: #eee;
-    }
-}
-
-.show {
-    display: flex;
-}
-
-.hide {
-    display: none;
-}
-
-#main {
-    height: 520px;
-    overflow-y: auto;
-}
-
-.main1 {
-    display: none;
-    width: 90%;
-    >div {
-        background: #fff;
-        width: 95%;
-        border: 2px solid #ccc;
-        margin-top: 5px;
-        @extend .center2;
-    }
-    input {
-        @extend .center3;
-    }
-    .div1 {
-        height: 40px;
-        @extend .center3;
-        width: 100%;
-        input {
-            color: $blue;
-        }
-    }
-    .div2 {
-        padding: 25px 0;
-        @extend .center2;
-        flex-direction: row;
-        position: relative;
-        display: none;
-        width: 100%;
-        >div {
-            width: 100%;
-        }
-        .line {
-            height: 140px;
-            width: 1px;
-            background: #ccc;
-            margin-left: 10%;
-        }
-        >div>div {
-            position: relative;
-        }
-        .btn {
-            width: 60%;
-            padding-left: 10%;
-        }
-        .btn::before {
-            content: '';
-            position: absolute;
-            left: 14%;
-            top: 7px;
-            height: 0;
-            width: 0;
-            border-right: 18px solid $blue;
-            border-top: 8px solid transparent;
-            border-bottom: 8px solid transparent;
-        }
-        .btn-click {
-            @extend .btn;
-            >p {
-                background: #93adb3;
+                flex-direction: row;
+                @extend .center2;
+                position: relative;
             }
-            &::before {
-                border-right: 18px solid #93adb3;
-            }
+            width: inherit;
         }
-    }
-    .input1 {
-        width: 70%;
-        display: none;
-        padding-left: 15%;
-        font-size: 12px;
-    }
-    .input2 {
-        color: $blue;
-        font-weight: bold;
+        @extend .center-x;
     }
 }
-
-.a {
-    background: #b9e9f5;
-    @include abs;
-    .s {
-        @include abs;
-        left: 10%;
-        border-top: 10px solid #b9e9f5;
-        border-left: 5px solid transparent;
-        border-right: 5px solid transparent;
-        z-index: 1;
-    }
-}
-
-.p {
-    background: $blue;
-    margin: 12px;
-    height: 30px;
-    width: 125%;
-    color: #fff;
-    position: relative;
-    @extend .size-m;
-    @extend .center3;
-}
-
-.main {
-    &-div {
-        width: 351px;
-        white-space: normal;
-        >div {
-            margin: 15px;
-            display: inline-block;
-            width: 80px;
-            height: 80px;
-            border: 2px solid #fff;
-            position: relative;
-            .choose1 {
-                @extend .size-m;
-                color: #000;
-                width: inherit;
-                background: #f5c97b;
-                height: 70%;
-            }
-            .choose2 {
-                color: #fff;
-                width: 15px;
-                width: inherit;
-                height: 30%;
-                background: #83b09a;
-            }
-            .img {
-                height: 15px;
-                width: 15px;
-                z-index: 100;
-                @include abs(85px);
-                @extend .center-x;
-                visibility: hidden;
-            }
-            &:hover .img {
-                visibility: visible;
-            }
-        }
-    }
-}
-
-footer {
-    background: #eee;
-    width: 100%;
-    max-width: 100%;
-    height: 70px;
-    position: absolute;
-    bottom: 0;
-    >div {
-        background: #EEE;
-        width: 90%;
-    }
+.choose1 {
+    height: 15px;
     a {
-        width: 40%;
-        padding: 10px;
-        margin: 0 5%;
+        z-index: 1;
+        margin: 15px;
+        border-left: 5px solid transparent;
     }
-}
+    display: none;
+    left: 10%;
+    .a {
+        @extend .size-m;
+        background: #eee;
+        color: $blue;
+        background: #fff;
+        .div1 {
+            width: 60%;
+            font-size: 25px;
+            width: 100%;
+            border-right: 5px solid transparent;
+            background: #EEE;
+        }
+        font-size: 12px;
+        border: $border;
+        >div {}
+        background: #ccc;
+        .btn {
+            display: none;
+            .div2 {}
+            .main1 {
+                z-index: 10000;
+                z-index: 100;
+                padding-left: 15%;
+            }
+            top: $top;
+            &::before {
+                footer {
+                    #bgimg,
+                    #bgimg2 {
+                        display: flex;
+                        width: 1px;
+                        width: 90%;
+                        width: 80px;
+                        height: 70%;
+                        position: absolute;
+                        border-top: 10px solid #b9e9f5;
+                        overflow-y: auto;
+                        color: #fff;
+                        @extend .center3;
+                    }
+                }
+
+                #bgimg2 {
+                    left: 0;
+                    .icon {}
+                    .s {
+                        color: #000;
+                        width: 90%;
+                        max-width: 100%;
+                        width: 100%;
+                        height: 30%;
+                        height: 100vh;
+                        padding: 25px 0;
+                        >div {}
+                        left: 14%;
+                    }
+                    height: 30px;
+                    top: 7px;
+                    background-size: cover;
+                    width: 125%;
+                    >div {}
+                    input {}
+                    content: '';
+                }
+
+                width: 100%;
+                &:hover .img {
+                    @import'common';
+                    color: $blue;
+                    .line {
+                        height: 140px;
+                        width: 15px;
+                        @extend .center3;
+                    }
+                    transform: translatex(-50%);
+                    .show {}
+                    display: none;
+                    bottom: 0;
+                    @extend .size-m;
+                }
+
+                .img {}
+
+                >p {
+                    width: 100%;
+                    top: 50%;
+                    .hide {
+                        background: #fff;
+                        background: #93adb3;
+                        border-radius: 50%;
+                        @include abs;
+                        >div {
+                            border-right: 18px solid #93adb3;
+                            border-top: 8px solid transparent;
+                            @extend .btn;
+                            background: url(../img/wolf.png ) no-repeat center center;
+                            margin: 12px;
+                            .btn-click {
+                                @extend .center3;
+                            }
+                            font-weight: bold;
+                            @include abs;
+                            position: absolute;
+                            @mixin abs ($top:60px) {
+                                @extend .center2;
+                                margin-left: 10%;
+                                background: url(../img/wolf.png ) no-repeat center center;
+                                margin-top: 5px;
+                            }
+                        }
+                    }
+                    margin-right: 5%;
+                    width: 95%;
+                }
+
+                @include abs(85px);
+                height: 1em;
+                background: #eee;
+                transform: translatey(-50%);
+                display: none;
+                &-div {
+                    height: 70px;
+                    background: #b9e9f5;
+                    .btn::before {
+                        overflow: hidden;
+                        .input1 {
+                            .choose2 {}
+                            background: $blue;
+                            border: 2px solid #ccc;
+                            width: 0;
+                            left: -100%;
+                        }
+                    }
+                    >div>div {
+                        height: 80px;
+                        position: absolute;
+                        .main {
+                            width: 1em;
+                        }
+                        position: relative;
+                        width: 40%;
+                        fill: currentColor;
+                        width: 70%;
+                    }
+                    position: absolute;
+                    background: #f5c97b;
+                }
+
+                background: #83b09a;
+                position: relative;
+                width: 100%;
+                .input2 {
+                    padding-left: 10%;
+                    >div {}
+                    border: 2px solid #fff;
+                    width: 100%;
+                    #main {
+                        visibility: visible;
+                        border-bottom: 8px solid transparent;
+                    }
+                    position: absolute;
+                    border-right: 18px solid $blue;
+                    vertical-align: -0.15em;
+                }
+
+                .p {}
+
+                color: #fff;
+                position: relative;
+                height: 40px;
+                display: inline-block;
+            }
+            width: 15px;
+            width: 351px;
+            padding: 10px;
+        }
+        margin: 0 5%;
+        white-space: normal;
+        input {
+            visibility: hidden;
+            body {
+                height: 0;
+                width: inherit;

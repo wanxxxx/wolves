@@ -31,15 +31,17 @@ console.log('进行了' + daynum + '天')
 $('#win').text(outcome)
 result[0].textContent = result1
 result[1].textContent = result2;
-for (i = 0; i < klist.length; i++) {
-    blank1[i].textContent = deadnum[i]
-    blank2[i].textContent = klist[i]
+$.each(deadnum, function(idx) {
+    if (idx % 2 == 0) {
+        end[idx].textContent = "白天：" + deadnum[idx] + "号被狼人杀死，是" + klist[idx]
+    }
+    if (idx % 2 == 1) {
+        end[idx].textContent = "晚上：" + deadnum[idx] + "号被全民投票杀死，是" + klist[idx]
+    }
+    if (deadnum[idx] == 0) {
+        end[idx].textContent = "无任何操作"
+    }
     if (klist.length % 2 == 1) {
         end[end.length - 1].textContent = '游戏结束 ';
     }
-    $.each(deadnum, function(idx) {
-        if (deadnum[idx] == 0) {
-            end[idx].textContent = "无任何操作"
-        }
-    });
-}
+});

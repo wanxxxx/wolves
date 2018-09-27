@@ -121,7 +121,10 @@ inputt[4 * daynum - 4].onclick = function() {
     var checknum = +sessionStorage.getItem('checknum');
     if (checknum == 0) {
         sessionStorage.setItem('checknum', 1);
-        window.location.href = 'result.html';
+        $("#bgimg")
+            .animate({ left: '0', }, 1000)
+            .animate({ opacity: '0', }, 500,
+                function() { window.location.href = "result.html" })
     } else {
         alert('请按顺序操作');
     }

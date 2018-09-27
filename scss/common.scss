@@ -246,6 +246,10 @@ $border:1px solid #eee;
     justify-content: center;
 }
 
+.blank {
+    height: 75px;
+}
+
 .padding-a {
     padding: 0 5vw
 }
@@ -288,6 +292,7 @@ body {
     padding: 0;
     @extend .center3;
     background: #fff;
+    height: 100vh;
     >div {
         overflow-y: auto;
         height: 100vh;
