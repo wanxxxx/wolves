@@ -34,14 +34,12 @@ button {
     padding: 0
 }
 
-
 /* 初始化标签在所有浏览器中的margin、padding值 */
 
 fieldset,
 img {
     border: 0 none
 }
-
 
 /* 重置fieldset（表单分组）、图片的边框为0*/
 
@@ -53,14 +51,12 @@ li {
     list-style: none
 }
 
-
 /* 重置类表前导符号为onne,menu在HTML5中有效 */
 
 blockquote,
 q {
     quotes: none
 }
-
 
 /* 重置嵌套引用的引号类型 */
 
@@ -72,7 +68,6 @@ q:after {
     content: none
 }
 
-
 /* 重置嵌套引用*/
 
 input,
@@ -82,7 +77,6 @@ button {
     vertical-align: middle
 }
 
-
 /* 重置表单控件垂直居中*/
 
 button {
@@ -91,13 +85,11 @@ button {
     cursor: pointer
 }
 
-
 /* 重置表单button按钮效果 */
 
 body {
     background: #fff
 }
-
 
 /* 重置body 页面背景为白色 */
 
@@ -113,13 +105,11 @@ button {
     color: #666
 }
 
-
 /* 重置页面文字属性 */
 
 a {
     text-decoration: none
 }
-
 
 /* 重置链接a标签 */
 
@@ -127,7 +117,6 @@ a:active,
 a:hover {
     text-decoration: none
 }
-
 
 /* 重置链接a标签的鼠标滑动效果 */
 
@@ -142,13 +131,11 @@ var {
     font-weight: normal
 }
 
-
 /* 重置样式标签的样式 */
 
 caption {
     display: none;
 }
-
 
 /* 重置表格标题为隐藏 */
 
@@ -159,19 +146,15 @@ table {
     table-layout: fixed;
 }
 
-
 /* 重置table属性 */
 
 img {
     vertical-align: top
 }
 
-
 /* 图片在当前行内的垂直位置 */
 
-
 /* 页面设置 */
-
 
 /* 取消a标签点击后的虚线框 */
 
@@ -183,22 +166,18 @@ a:active {
     star: expression(this.onFocus=this.blur());
 }
 
-
 /* 设置页面文字等在拖动鼠标选中情况下的背景色与文字颜色 */
-
 
 /*
 ::selection {color: #fff;background-color: #4C6E78;}
 ::-moz-selection {color: #fff;background-color: #4C6E78;}
 */
 
-
 /*清除浮动*/
 
 .clear {
     clear: both;
 }
-
 
 /*清除浮动--推荐使用*/
 
@@ -222,6 +201,7 @@ hr {
 
 $blue:#7bafd4;
 $border:1px solid #eee;
+
 * {
     padding: 0;
     margin: 0;
@@ -293,12 +273,13 @@ body {
     @extend .center3;
     background: #fff;
     height: 100vh;
+
     >div {
-        overflow-y: auto;
         height: 100vh;
         position: relative;
         @extend .center2;
-        min-width: 330px;
+        min-width: 315px;
+
         max-width: 800px;
         background: #eee;
         width: 100vw;
@@ -312,6 +293,7 @@ main {
     align-items: center;
     flex-direction: column;
     @extend .size-m;
+
     >div {
         width: 80%;
     }
@@ -327,10 +309,12 @@ main {
     border-bottom: $border;
     background: $blue;
     color: #FFF;
+
     >p,
     >a {
         margin: 0 5%;
     }
+
     a:link,
     a:visited {
         color: #FFF;
@@ -346,6 +330,7 @@ footer {
     height: 70px;
     bottom: 0;
     z-index: 1000;
+
     div {
         width: 70%;
         background: $blue;
@@ -353,6 +338,7 @@ footer {
         margin-bottom: 25px;
         @extend .center3;
     }
+
     a {
         width: inherit;
         text-align: center;
@@ -361,8 +347,6 @@ footer {
         border-radius: 5px;
     }
 }
-
-footer {}
 
 input {
     border: none;

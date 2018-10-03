@@ -21,9 +21,11 @@
 }
 
 body {
+
     >div {
         background: #eee;
         width: 100%;
+        overflow-x: hidden;
         #bgimg {
             position: absolute;
             top: 50%;
@@ -42,8 +44,8 @@ body {
             transform: translatey(-50%);
             height: 100vh;
             z-index: 10000;
-            left: -100%;
-            background: url(../img/wolf.png ) no-repeat center center;
+            right: -100%;
+            background: url(../img/日出.png ) no-repeat center center;
             background-size: cover;
         }
     }

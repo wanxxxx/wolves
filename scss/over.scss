@@ -39,26 +39,28 @@ header {
         @extend .center2;
     }
     &-part1 {
-        padding: 95px 0;
+
         position: relative;
         @extend .center2;
         >svg {
             font-size: 50px;
             position: absolute;
-            top: 100px;
+            top: 60px;
         }
-        .img1 {
-            @include abs(70px);
+        .img2 {
+            @include abs(45px);
         }
         >span {
-            @include abs(183px);
+            @include abs(135px);
             font-weight: bold;
             color: white;
             white-space: nowrap
         }
     }
+
     &-part3 {
         margin-left: -40%;
+        margin-top: 180px;
         p {
             width: 100px;
             @extend .size-m;
@@ -67,7 +69,14 @@ header {
             margin: 7px;
         }
         >div {
-            @extend .center3
+            margin-left: 7px;
+            @extend .center3;
+            .icon {
+                font-size: 12px;
+            }
+            >div {
+                @extend .center3;
+            }
         }
     }
 }

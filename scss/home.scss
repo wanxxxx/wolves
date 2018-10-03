@@ -34,14 +34,12 @@ button {
     padding: 0
 }
 
-
 /* 初始化标签在所有浏览器中的margin、padding值 */
 
 fieldset,
 img {
     border: 0 none
 }
-
 
 /* 重置fieldset（表单分组）、图片的边框为0*/
 
@@ -53,14 +51,12 @@ li {
     list-style: none
 }
 
-
 /* 重置类表前导符号为onne,menu在HTML5中有效 */
 
 blockquote,
 q {
     quotes: none
 }
-
 
 /* 重置嵌套引用的引号类型 */
 
@@ -72,7 +68,6 @@ q:after {
     content: none
 }
 
-
 /* 重置嵌套引用*/
 
 input,
@@ -82,7 +77,6 @@ button {
     vertical-align: middle
 }
 
-
 /* 重置表单控件垂直居中*/
 
 button {
@@ -91,13 +85,11 @@ button {
     cursor: pointer
 }
 
-
 /* 重置表单button按钮效果 */
 
 body {
     background: #fff
 }
-
 
 /* 重置body 页面背景为白色 */
 
@@ -113,13 +105,11 @@ button {
     color: #666
 }
 
-
 /* 重置页面文字属性 */
 
 a {
     text-decoration: none
 }
-
 
 /* 重置链接a标签 */
 
@@ -127,7 +117,6 @@ a:active,
 a:hover {
     text-decoration: none
 }
-
 
 /* 重置链接a标签的鼠标滑动效果 */
 
@@ -142,13 +131,11 @@ var {
     font-weight: normal
 }
 
-
 /* 重置样式标签的样式 */
 
 caption {
     display: none;
 }
-
 
 /* 重置表格标题为隐藏 */
 
@@ -159,19 +146,15 @@ table {
     table-layout: fixed;
 }
 
-
 /* 重置table属性 */
 
 img {
     vertical-align: top
 }
 
-
 /* 图片在当前行内的垂直位置 */
 
-
 /* 页面设置 */
-
 
 /* 取消a标签点击后的虚线框 */
 
@@ -183,22 +166,18 @@ a:active {
     star: expression(this.onFocus=this.blur());
 }
 
-
 /* 设置页面文字等在拖动鼠标选中情况下的背景色与文字颜色 */
-
 
 /*
 ::selection {color: #fff;background-color: #4C6E78;}
 ::-moz-selection {color: #fff;background-color: #4C6E78;}
 */
 
-
 /*清除浮动*/
 
 .clear {
     clear: both;
 }
-
 
 /*清除浮动--推荐使用*/
 
@@ -222,6 +201,7 @@ hr {
 
 $blue:#7bafd4;
 $border:1px solid #eee;
+
 * {
     padding: 0;
     margin: 0;
@@ -283,41 +263,107 @@ $border:1px solid #eee;
     top: $t;
 }
 
+.rule {
+    position: absolute;
+
+    right: 5%;
+    font-size: 13px;
+    color: #aa001d;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100px;
+
+    i {
+        font-size: 20px;
+        margin: 10px;
+        display: inline-block;
+    }
+
+    p {
+        display: inline-block;
+    }
+}
+
 body {
     margin: 0;
     padding: 0;
     @extend .center3;
     color: $blue;
     background: #fff;
+    overflow-y: hidden;
+
     main {
-        height: 100vh;
-        overflow-y: hidden;
+        height: 200vh;
+        position: absolute;
+        top: 0;
+        overflow: hidden;
+        width: 100vw;
+        max-width: 800px;
+        min-width: 315px;
+
         >div {
             height: 100vh;
+            width: 100%;
+            background: #eee;
+
+        }
+
+        .main1 {
+
             position: relative;
             @extend .center2;
-            background: #eee;
-            width: 100vw;
-            min-width: 330px;
-            max-width: 800px;
-            top: -100vh;
+
+            .rule {
+                bottom: 40px;
+            }
+        }
+
+        .main2 {
+
+            background: url(../img/bg4.png) no-repeat center center;
+            background-size: 100% 100%;
+            -moz-background-size: 100% 100%;
+
+            >div {
+                width: 80%;
+                padding: 5% 10%;
+                color: #000;
+                position: relative;
+                height: 90%;
+                overflow-y: auto;
+
+                >h4 {
+                    line-height: 1.5em;
+                }
+
+                .rule {
+                    position: absolute;
+                    right: 2%;
+                    font-size: 17px;
+                    font-weight: bold;
+                    cursor: pointer;
+
+                    color: #000
+                }
+
+                >p {
+                    font-size: 14px;
+                    line-height: 1.5em;
+                }
+            }
         }
     }
-    .main2 {
-        background: url(../img/bg4.png) no-repeat center center;
-        background-size: 100% 100%;
-        -moz-background-size: 100% 100%;
-        >div {
-            width: 80%;
-            margin-top: 10%;
-            color: #000;
-            >h3,
-            >p {
-                line-height: 1.5em;
-            }
-            >p {
-                font-size: 12px;
-            }
+
+    table {
+        margin: 0.5em;
+
+        th {
+            font-size: 17px;
+        }
+
+        td {
+            font-size: 14px;
+            text-align: center;
         }
     }
 }
@@ -340,19 +386,4 @@ img:nth-child(2) {
     opacity: 0;
     cursor: pointer;
     z-index: 1000;
-}
-
-.rule {
-    position: absolute;
-    bottom: 40px;
-    @extend .center;
-    right: 5%;
-    font-size: 13px;
-    color: #aa001d;
-    font-weight: bold;
-    cursor: pointer;
-    i {
-        font-size: 20px;
-        margin: 10px;
-    }
 }

@@ -12,19 +12,26 @@ function change() {
         window.location.href = "start.html";
     });
 }
-$('div').click(function() {
-    $(".main1").animate({
+$('.rule1').click(function() {
+    $("main").animate({
         top: '-100vh',
+    }, 2000, );
+    $(".main1").animate({
         opacity: '0',
     }, 2000, );
+    $(".main2").animate({
+        opacity: '1',
+    }, 2000, );
+
 })
-$("#img").hover(function() {
-    $("#img")
-        .animate({ top: '56.5%', }, 300, )
-        .animate({ top: '63%', }, 300, )
-        .animate({ top: '58%', }, 300, )
-        .animate({ top: '62%', }, 300, )
-        .animate({ top: '59.5%', }, 300, )
-        .animate({ top: '60.5%', }, 300, )
-        .animate({ top: '60%', }, 300, )
+$('.rule2').click(function() {
+    $("main").animate({
+        top: '0',
+    }, 2000, );
+    $(".main1").animate({
+        opacity: '1',
+    }, 2000, );
+    $(".main2").animate({
+        opacity: '0',
+    }, 2000, );
 })
