@@ -47,7 +47,14 @@ $("#btn2").click(function() {
         } else {
             deadnum.push(0)
             sessionStorage.deadnum = JSON.stringify(deadnum);
-            window.location.href = 'book.html';
+            $("header").hide()
+            $("main").hide()
+            $("footer").hide()
+            $("#bgimg2")
+                .animate({ right: '0', }, 1500)
+                .animate({ opacity: '0', }, 500,
+                    function() { window.location.href = "book.html" })
+
         }
     } else if (killed == "狼人" && checknum == 1) {
         console.log('1')
@@ -67,14 +74,23 @@ $("#btn2").click(function() {
                 sessionStorage.setItem('daynum', daynum + 1);
                 sessionStorage.setItem('checknum', 0);
             }
-            window.location.href = 'book.html';
+
             sessionStorage.deadnum = JSON.stringify(deadnum);
+            $("header").hide()
+            $("main").hide()
+            $("footer").hide()
+            $("#bgimg2")
+                .animate({ right: '0', }, 1000)
+                .animate({ opacity: '0', }, 500,
+                    function() { window.location.href = "book.html" })
         }
     }
 });
 //--------------杀掉后变色--------------
 $.each(people, function(idx) {
     if (people[idx] == 'dead') {
-        input1[idx].setAttribute('style', ' background: #83b09a')
+        input1[idx].setAttribute('style', ' background: #93adb3')
+        input2[idx].setAttribute('style', ' background: #93adb3')
+
     }
 });

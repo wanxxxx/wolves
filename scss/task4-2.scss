@@ -1,4 +1,5 @@
 @import'common';
+
 @mixin abs ($top:60px) {
     position: absolute;
     top: $top;
@@ -26,6 +27,7 @@ body {
         background: #eee;
         width: 100%;
         overflow-x: hidden;
+
         #bgimg {
             position: absolute;
             top: 50%;
@@ -37,17 +39,7 @@ body {
             background: url(../img/wolf.png ) no-repeat center center;
             background-size: cover;
         }
-        #bgimg2 {
-            position: absolute;
-            top: 50%;
-            width: 100%;
-            transform: translatey(-50%);
-            height: 100vh;
-            z-index: 10000;
-            right: -100%;
-            background: url(../img/日出.png ) no-repeat center center;
-            background-size: cover;
-        }
+
     }
 }
 
@@ -66,6 +58,7 @@ body {
 .main1 {
     display: none;
     width: 90%;
+
     >div {
         background: #fff;
         width: 95%;
@@ -73,17 +66,21 @@ body {
         margin-top: 5px;
         @extend .center2;
     }
+
     input {
         @extend .center3;
     }
+
     .div1 {
         height: 40px;
         @extend .center3;
         width: 100%;
+
         input {
             color: $blue;
         }
     }
+
     .div2 {
         padding: 25px 0;
         @extend .center2;
@@ -91,22 +88,27 @@ body {
         position: relative;
         display: none;
         width: 100%;
+
         >div {
             width: 100%;
         }
+
         .line {
             height: 140px;
             width: 1px;
             background: #ccc;
             margin-left: 10%;
         }
+
         >div>div {
             position: relative;
         }
+
         .btn {
             width: 60%;
             padding-left: 10%;
         }
+
         .btn::before {
             content: '';
             position: absolute;
@@ -118,22 +120,27 @@ body {
             border-top: 8px solid transparent;
             border-bottom: 8px solid transparent;
         }
+
         .btn-click {
             @extend .btn;
+
             >p {
                 background: #93adb3;
             }
+
             &::before {
                 border-right: 18px solid #93adb3;
             }
         }
     }
+
     .input1 {
         width: 70%;
         display: none;
         padding-left: 15%;
         font-size: 12px;
     }
+
     .input2 {
         color: $blue;
         font-weight: bold;
@@ -143,6 +150,7 @@ body {
 .a {
     background: #b9e9f5;
     @include abs;
+
     .s {
         @include abs;
         left: 10%;
@@ -168,6 +176,7 @@ body {
     &-div {
         width: 351px;
         white-space: normal;
+
         >div {
             margin: 15px;
             display: inline-block;
@@ -175,6 +184,7 @@ body {
             height: 80px;
             border: 2px solid #fff;
             position: relative;
+
             .choose1 {
                 @extend .size-m;
                 color: #000;
@@ -182,6 +192,7 @@ body {
                 background: #f5c97b;
                 height: 70%;
             }
+
             .choose2 {
                 color: #fff;
                 width: 15px;
@@ -189,6 +200,7 @@ body {
                 height: 30%;
                 background: #83b09a;
             }
+
             .img {
                 height: 15px;
                 width: 15px;
@@ -197,6 +209,7 @@ body {
                 @extend .center-x;
                 visibility: hidden;
             }
+
             &:hover .img {
                 visibility: visible;
             }
@@ -211,10 +224,12 @@ footer {
     height: 70px;
     position: absolute;
     bottom: 0;
+
     >div {
         background: #EEE;
         width: 90%;
     }
+
     a {
         width: 40%;
         padding: 10px;

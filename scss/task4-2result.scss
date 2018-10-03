@@ -1,5 +1,6 @@
 @import'common';
 @import'task4-1';
+
 @mixin flex($ali:center, $jus:center, $w:100%, $h:60px) {
     display: flex;
     align-items: $ali;
@@ -17,10 +18,15 @@
     width: 100%;
 }
 
+body>div {
+    overflow-x: hidden;
+}
+
 header {
     height: 120px;
     width: 100%;
     @extend .center2;
+
     >div {
         width: 100%;
     }
@@ -32,9 +38,11 @@ header {
     @include flex ($w: 100%, $jus:space-between);
     height: 50px;
     color: #000;
+
     >div {
         margin-left: 5%;
     }
+
     .s {
         @include abs;
         top: 100%;
@@ -46,10 +54,23 @@ header {
     }
 }
 
+#bgimg2 {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translatey(-50%);
+    height: 100vh;
+    z-index: 10000;
+    right: -100%;
+    background: url(../img/日出.png ) no-repeat center center;
+    background-size: cover;
+}
+
 .main {
     .choose {
         position: relative;
     }
+
     .img {
         height: 20px;
         width: 20px;
@@ -57,6 +78,7 @@ header {
         top: 90px;
         visibility: hidden;
     }
+
     .img-click {
         @extend .img;
         visibility: visible;

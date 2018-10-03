@@ -125,7 +125,7 @@ inputt[4 * daynum - 4].onclick = function() {
         $("main").hide()
         $("footer").hide()
         $("#bgimg")
-            .animate({ left: '0', }, 1000)
+            .animate({ left: '0', }, 1500)
             .animate({ opacity: '0', }, 500,
                 function() { window.location.href = "result.html" })
     } else {
@@ -162,13 +162,7 @@ inputt[4 * daynum - 1].onclick = function() {
     if (checknum == 3) {
         killgame.action4();
         sessionStorage.setItem('checknum', 4);
-        $("header").hide()
-        $("main").hide()
-        $("footer").hide()
-        $("#bgimg2")
-            .animate({ right: '0', }, 1000)
-            .animate({ opacity: '0', }, 500,
-                function() { window.location.href = "result.html" })
+        window.location.href = "result.html";
     } else {
         alert('请按顺序操作');
     }

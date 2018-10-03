@@ -1,5 +1,6 @@
 @import'common';
 $blue:#5fc0cd;
+
 @mixin flex($ali:center, $jus:center, $w:100%, $h:60px) {
     display: flex;
     align-items: $ali;
@@ -14,9 +15,11 @@ $blue:#5fc0cd;
     vertical-align: -0.15em;
     fill: currentColor;
     overflow: hidden;
+
 }
 
 $border:1px solid #c4c4c4;
+
 * {
     justify-content: auto;
 }
@@ -34,22 +37,27 @@ header {
 .main {
     overflow-y: auto;
     width: 100%;
+
     >div {
         width: 80%;
         @extend .center2;
     }
+
     &-part1 {
 
         position: relative;
         @extend .center2;
+
         >svg {
             font-size: 50px;
             position: absolute;
             top: 60px;
         }
+
         .img2 {
             @include abs(45px);
         }
+
         >span {
             @include abs(135px);
             font-weight: bold;
@@ -59,22 +67,26 @@ header {
     }
 
     &-part3 {
-        margin-left: -40%;
+        width: 90%;
+
         margin-top: 180px;
+
         p {
-            width: 100px;
+            width: 80px;
             @extend .size-m;
             color: #000;
             text-align: left;
-            margin: 7px;
+            margin: 7px 0;
         }
+
         >div {
-            margin-left: 7px;
-            @extend .center3;
+
             .icon {
-                font-size: 12px;
+                font-size: 20px;
             }
+
             >div {
+                float: left;
                 @extend .center3;
             }
         }
@@ -87,9 +99,11 @@ header {
     background: white;
     width: 90%;
     margin-bottom: 100px;
+
     .box {
         border: $border;
     }
+
     p {
         text-align: left;
         margin: 5px 0 5px 5%;

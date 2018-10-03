@@ -1,6 +1,7 @@
 var msg = JSON.parse(sessionStorage.msg)
 var people = JSON.parse(sessionStorage.people);
 var input1 = document.getElementsByClassName("choose1")
+var input1 = document.getElementsByClassName("choose2")
 
 var choose = document.getElementsByClassName("choose")
 var main = document.getElementsByClassName("main")
@@ -16,8 +17,8 @@ for (i = 0; i < msg.length; i++) {
 //--------------杀掉后变色--------------
 $.each(people, function(idx) {
     if (people[idx] == 'dead') {
-        input1[idx].setAttribute('style', ' background: #83b09a')
+        input1[idx].setAttribute('style', ' background: #93adb3')
+        input2[idx].setAttribute('style', ' background: #93adb3')
     }
 
 });
-
