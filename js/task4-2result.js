@@ -5,7 +5,7 @@ var daynum = +sessionStorage.getItem('daynum')
 var checknum = +sessionStorage.getItem('checknum');
 var deadnum = JSON.parse(sessionStorage.deadnum); //重新转换为数组
 console.log("daynum=" + daynum);
-console.log(people)
+console.log(checknum)
 console.log("checknum=" + checknum)
 var input1 = document.getElementsByClassName("choose1")
 var input2 = document.getElementsByClassName("choose2")
@@ -47,13 +47,17 @@ $("#btn2").click(function() {
         } else {
             deadnum.push(0)
             sessionStorage.deadnum = JSON.stringify(deadnum);
-            $("header").hide()
-            $("main").hide()
-            $("footer").hide()
-            $("#bgimg2")
-                .animate({ right: '0', }, 1500)
-                .animate({ opacity: '0', }, 500,
-                    function() { window.location.href = "book.html" })
+            if (checknum == 1) {
+                $("header").hide()
+                $("main").hide()
+                $("footer").hide()
+                $("#bgimg2")
+                    .animate({ right: '0', }, 1500)
+                    .animate({ opacity: '0', }, 500,
+                        function() { window.location.href = "book.html" })
+            } else {
+                window.location.href = "book.html"
+            }
 
         }
     } else if (killed == "狼人" && checknum == 1) {
@@ -76,13 +80,17 @@ $("#btn2").click(function() {
             }
 
             sessionStorage.deadnum = JSON.stringify(deadnum);
-            $("header").hide()
-            $("main").hide()
-            $("footer").hide()
-            $("#bgimg2")
-                .animate({ right: '0', }, 1000)
-                .animate({ opacity: '0', }, 500,
-                    function() { window.location.href = "book.html" })
+            if (checknum == 1) {
+                $("header").hide()
+                $("main").hide()
+                $("footer").hide()
+                $("#bgimg2")
+                    .animate({ right: '0', }, 1500)
+                    .animate({ opacity: '0', }, 500,
+                        function() { window.location.href = "book.html" })
+            } else {
+                window.location.href = "book.html"
+            }
         }
     }
 });
